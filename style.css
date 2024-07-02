@@ -28,7 +28,8 @@ dd {
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
 ul[role="list"],
-ol[role="list"] {
+ol[role="list"],
+li {
   list-style: none;
 }
 
@@ -58,9 +59,11 @@ h4 {
 }
 
 /* A elements that don't have a class get default styles */
-a:not([class]) {
+a:not([class]),
+a {
   text-decoration-skip-ink: auto;
   color: currentColor;
+  text-decoration: none;
 }
 
 /* Make images easier to work with */
@@ -87,4 +90,116 @@ textarea:not([rows]) {
 /* Anything that has been anchored to should have extra scroll margin */
 :target {
   scroll-margin-block: 5ex;
+}
+
+/* Color Variable */
+:root {
+  --color-dark-grey: #505050;
+  --color-blue: #5380ea;
+  --color-light-blue: #ebf0ff;
+  --color-yellow: #f0b80d;
+  --color-light-yellow: #ffd24b;
+  --color-dark-blue: #3b5591;
+  --color-black: #000000;
+  --color-white: #ffffff;
+}
+
+/* *************** UTILITIES *************** */
+/* Center Content Both Horizontally and Vertically */
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-center-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Center Content Vertically */
+.flex-center-y {
+  display: flex;
+  align-items: center;
+}
+
+/* Center Content Horizontally */
+.flex-center-x {
+  display: flex;
+  justify-content: center;
+}
+
+/* Start Content Both Horizontally and Vertically */
+.flex-start {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+/* End Content Both Horizontally and Vertically */
+.flex-end {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+/* Center Content in Column Both Horizontally and Vertically */
+.flex-col-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Start Content in Column Both Horizontally and Vertically */
+.flex-col-start {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+/* End Content in Column Both Horizontally and Vertically */
+.flex-col-end {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+/* *************** Container *************** */
+.container {
+  background-color: var(--color-light-blue);
+  height: 100dvh;
+  background-image: url("./asset/background.png");
+}
+
+header {
+  padding: 2rem 4rem;
+}
+
+header nav .logo {
+  max-width: 4rem;
+}
+
+header nav .nav-links {
+  gap: 2rem;
+}
+
+header nav ul {
+  gap: 1rem;
+}
+
+header .hambuger {
+  display: none;
+}
+
+header nav button {
+  background-color: var(--color-yellow);
+  border: 1px solid var(--color-light-yellow);
+  border-radius: 2rem;
+  font-size: 1rem;
+  width: 9rem;
+  height: 3rem;
+  box-shadow: 0px 10px 34px 0px #eac555;
 }

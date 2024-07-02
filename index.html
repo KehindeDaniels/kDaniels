@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - Kehinde Daniels</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Overall Container -->
+    <div class="container">
+      <!-- <img src="./asset/background.png" alt="" /> -->
+      <!-- HEADER -->
+      <header>
+        <!-- ---------------Navigartion-------------------- -->
+        <nav class="flex-center-between">
+          <div class="logo">
+            <img src="./asset/logo.png" alt="" />
+          </div>
+
+          <div class="nav-links flex-center">
+            <div class="light-mode"></div>
+            <ul class="flex-center">
+              <li><a href="#">Projects</a></li>
+              <li><a href="#">myBlog</a></li>
+              <li><a href="#">myCv</a></li>
+            </ul>
+            <div class="hambuger"></div>
+            <button>Contact me</button>
+          </div>
+        </nav>
+        <!-- ---------------Hero section-------------------- -->
+        <div class="hero">
+          <div class="hero-left"></div>
+          <div class="hero-right"></div>
+        </div>
+      </header>
+
+      <!-- ---------------Main Section-------------------- -->
+      <main>
+        <!-- ---------------Tech Stack-------------------- -->
+        <div class="stack">
+          <div class="stack-left"></div>
+          <div class="stack-right"></div>
+        </div>
+
+        <!-- ---------------Goal Section-------------------- -->
+        <div class="goal">
+          <div class="goal-left"></div>
+          <div class="goal-right"></div>
+        </div>
+      </main>
+
+      <footer></footer>
+    </div>
+    <!-- <header class="header">
+      <div class="container">
+        <img
+          src="path/to/profile-picture.jpg"
+          alt="Profile Picture"
+          data-testid="slackProfilePicture"
+        />
+        <nav class="nav">
+          <ul>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#blog">myBlog</a></li>
+            <li><a href="#cv">myCv</a></li>
+            <li><a href="#contact" class="button">Contact me</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header> -->
+
+    <!-- <section class="intro">
+        <div class="container">
+          <h1>
+            Hi there, I'm
+            <span data-testid="slackDisplayName">Kehinde Daniels</span>, a
+            <span class="highlight">front-end</span> Developer 👋
+          </h1>
+          <p>
+            Software Engineer and Product Designer with more than 2 years of
+            expertise in designing and developing front-end applications.
+          </p>
+          <button class="cta-button" data-testid="scheduleCall">
+            Schedule a call
+          </button>
+        </div>
+      </section> -->
+    <!-- <section class="latest-work" id="projects">
+        <div class="container">
+          <h2>Latest Work</h2>
+          <div class="work-grid">
+          </div>
+          <a href="#" class="view-all">View all</a>
+        </div>
+      </section>
+      <section class="tech-stack">
+        <div class="container">
+          <h2>Tech Stack</h2>
+          <p>
+            I utilize modern tools and technologies to deliver exceptional user
+            experiences.
+          </p>
+          <div class="tech-icons">
+          </div>
+        </div>
+      </section>
+      <section class="goals">
+        <div class="container">
+          <h2>My Goals</h2>
+          <ul>
+            <li>To contribute to open source, while improving my skills</li>
+            <li>To complete my portfolio project</li>
+            <li>Participate in code review</li>
+            <li>
+              Enhance skills in automated testing with frameworks like jest and
+              cypress
+            </li>
+            <li>
+              Stay updated with the latest web development trends and
+              technologies
+            </li>
+          </ul>
+          <button class="submit-button">Submit</button>
+        </div>
+      </section>
+      <section class="footer">
+        <div class="container">
+          <p>
+            In fulfilment of stage one of the
+            <span data-testid="internshipName">HNG Internship 11</span>
+          </p>
+          <p>Find us on all social media platform</p>
+          <div class="social-icons">
+            <a href="#" data-testid="twitterLink"
+              ><img src="path/to/twitter-icon.png" alt="Twitter"
+            /></a>
+            <a href="#" data-testid="facebookLink"
+              ><img src="path/to/facebook-icon.png" alt="Facebook"
+            /></a>
+            <a href="#" data-testid="telegramLink"
+              ><img src="path/to/telegram-icon.png" alt="Telegram"
+            /></a>
+          </div>
+        </div>
+      </section> -->
+
+    <!-- <footer>
+      <div class="container">
+        <p>&copy; 2024 Kehinde Daniels. All rights reserved.</p>
+      </div>
+    </footer> -->
+    <script>
+      // JavaScript to display current time and day
+      document.addEventListener("DOMContentLoaded", function () {
+        const currentTimeElement = document.querySelector(
+          '[data-testid="currentTimeUTC"]'
+        );
+        const currentDayElement = document.querySelector(
+          '[data-testid="currentDay"]'
+        );
+
+        function updateTimeAndDay() {
+          const now = new Date();
+          currentTimeElement.textContent = now.toUTCString().split(" ")[4];
+          currentDayElement.textContent = now.toLocaleDateString("en-US", {
+            weekday: "long",
+          });
+        }
+
+        setInterval(updateTimeAndDay, 1000);
+        updateTimeAndDay();
+      });
+    </script>
+  </body>
+</html>
