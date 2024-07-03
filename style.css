@@ -194,8 +194,35 @@ header nav ul {
   gap: 1rem;
 }
 
-header .hambuger {
+.hamburger {
   display: none;
+  width: 40px;
+  height: 2px;
+  background-color: var(--color-black);
+  position: relative;
+  margin-right: 2rem;
+  transition: all 0.3s ease;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  height: inherit;
+  width: 70%;
+  background-color: var(--color-blue);
+  transition: all 0.3s ease;
+}
+
+.hamburger::before {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  /* transform: rotate(45deg); */
+}
+.hamburger::after {
+  position: absolute;
+  top: 10px;
+  right: 0;
 }
 
 header nav button {
@@ -316,4 +343,49 @@ footer .social-media {
 
 footer img {
   width: 50px;
+}
+
+@media (max-width: 768px) {
+  .nav-links ul {
+    display: none;
+    flex-direction: column;
+    border-radius: 0.5rem;
+    width: 200px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: white;
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  .nav-links ul.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .hamburger.toggle::before {
+    transform: rotate(45deg);
+    top: 0;
+    width: 100%;
+  }
+
+  .hamburger.toggle::after {
+    transform: rotate(-45deg);
+    top: 0;
+    width: 100%;
+  }
+
+  .hamburger.toggle {
+    background-color: transparent;
+  }
 }

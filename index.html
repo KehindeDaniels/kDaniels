@@ -29,12 +29,14 @@
               <li><a href="#">myBlog</a></li>
               <li><a href="#">myCv</a></li>
             </ul>
-            <div class="hambuger"></div>
-            <button>Contact me</button>
+            <div class="flex-center">
+              <div class="hamburger" onclick="toggleMenu(this)"></div>
+              <button>Contact me</button>
+            </div>
           </div>
         </nav>
         <!-- ---------------Hero section-------------------- -->
-        <div class="hero flex-start">
+        <!-- <div class="hero flex-start">
           <div class="hero-left">
             <div class="hero-left-top">
               <div class="hero-introduction">
@@ -65,7 +67,7 @@
           <div class="hero-right">
             <img src="./asset/profile-img.png" alt="profile Picture" />
           </div>
-        </div>
+        </div> -->
       </header>
 
       <!-- ---------------Main Section-------------------- -->
@@ -253,6 +255,11 @@
         setInterval(updateTimeAndDay, 1000);
         updateTimeAndDay();
       });
+
+      function toggleMenu(hamburger) {
+        hamburger.classList.toggle("toggle");
+        document.querySelector(".nav-links ul").classList.toggle("show");
+      }
     </script>
   </body>
 </html>
