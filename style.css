@@ -29,14 +29,18 @@ dd {
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
 ul[role="list"],
 ol[role="list"],
-li {
+li,
+ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 /* Set core body defaults */
 body {
   min-height: 100vh;
   line-height: 1.5;
+  font-family: "Inter", sans-serif;
 }
 
 /* Set shorter line heights on headings and interactive elements */
@@ -170,7 +174,7 @@ textarea:not([rows]) {
 /* *************** Container *************** */
 .container {
   background-color: var(--color-light-blue);
-  height: 100dvh;
+  /* height: 100dvh; */
   background-image: url("./asset/background.png");
 }
 
@@ -202,4 +206,114 @@ header nav button {
   width: 9rem;
   height: 3rem;
   box-shadow: 0px 10px 34px 0px #eac555;
+}
+
+.hero {
+  margin-top: 3rem;
+}
+
+.hero-left,
+.hero-right {
+  flex: 1;
+}
+
+.hero-left {
+  z-index: 999;
+}
+
+header .hero .hero-right img {
+  width: 579px;
+}
+
+.hero h1 {
+  font-size: 2rem;
+}
+
+.greetings {
+  margin-bottom: -1rem;
+}
+
+.highlight {
+  color: var(--color-blue);
+}
+
+.hero button {
+  width: 10rem;
+  height: 3rem;
+  background-color: var(--color-white);
+  border: 1px solid #c4c4c4;
+  margin-top: 1rem;
+}
+
+.latest-project {
+  display: flex;
+  z-index: 9999;
+  gap: 1rem;
+}
+
+.latest-project img {
+  width: 16rem;
+}
+
+.stack,
+.goal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 4rem;
+}
+
+.stack-left,
+.stack-right,
+.goal-left,
+.goal-right {
+  flex: 1;
+}
+
+.stack-left img {
+  width: 648px;
+}
+
+.goal-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  background-color: var(--color-white);
+  gap: 3rem;
+  padding: 3rem;
+}
+
+.goal-left img {
+  width: 400px;
+}
+
+.goal-right button {
+  width: 200px;
+  padding: 1rem 2rem;
+  border-radius: 2.5rem;
+  border: 1px solid var(--color-blue);
+  background-color: var(--color-blue);
+  color: var(--color-white);
+}
+
+.goal-right p {
+  margin-top: -2rem;
+}
+
+footer {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+footer .social-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer img {
+  width: 50px;
 }

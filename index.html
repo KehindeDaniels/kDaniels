@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio - Kehinde Daniels</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <!-- Overall Container -->
@@ -30,9 +34,37 @@
           </div>
         </nav>
         <!-- ---------------Hero section-------------------- -->
-        <div class="hero">
-          <div class="hero-left"></div>
-          <div class="hero-right"></div>
+        <div class="hero flex-start">
+          <div class="hero-left">
+            <div class="hero-left-top">
+              <div class="hero-introduction">
+                <p class="greetings">Hi there,</p>
+                <h1>
+                  <span data-testid="slackDisplayName"
+                    >I'm Kehinde Daniels, a</span
+                  >
+                  <span class="highlight">front-end</span> Developer 👋
+                </h1>
+              </div>
+              <p>
+                Software Engineer and Product Designer with more than 2 years of
+                expertise in designing and developing front-end applications.
+              </p>
+
+              <button>Schedule call</button>
+            </div>
+            <div class="hero-left-bottom">
+              <h2>Latest Work</h2>
+              <div class="latest-project">
+                <img src="./asset/project-1.png" alt="project one" />
+                <img src="./asset/project-2.jpg" alt="project two" />
+                <img src="./asset/project-3.jpg" t="project three" />
+              </div>
+            </div>
+          </div>
+          <div class="hero-right">
+            <img src="./asset/profile-img.png" alt="profile Picture" />
+          </div>
         </div>
       </header>
 
@@ -40,18 +72,67 @@
       <main>
         <!-- ---------------Tech Stack-------------------- -->
         <div class="stack">
-          <div class="stack-left"></div>
-          <div class="stack-right"></div>
+          <div class="stack-left">
+            <h3>Tech Stack</h3>
+            <p>
+              I utilize modern tools and technologies to deliver exceptional
+              user experiences.
+            </p>
+          </div>
+          <div class="stack-right">
+            <img src="./asset/skills.jpg" alt="" />
+          </div>
         </div>
 
         <!-- ---------------Goal Section-------------------- -->
         <div class="goal">
-          <div class="goal-left"></div>
-          <div class="goal-right"></div>
+          <div class="goal-left">
+            <img src="./asset/myGoal.png" alt="" />
+          </div>
+          <div class="goal-right">
+            <h2>My Goals</h2>
+            <p>
+              As of
+              <span id="currentTimeUTC" data-testid="currentTimeUTC"
+                >14:35 UTC</span
+              >
+              on this beautiful
+              <span id="currentDay" data-testid="currentDay">Monday</span>, I'm
+              excited to share my goals for the next two years in the tech
+              field.
+            </p>
+            <ul>
+              <li>To contribute to open source, while improving my skills</li>
+              <li>To complete my portfolio project</li>
+              <li>Participate in code review</li>
+              <li>
+                Enhance skills in automated testing with frameworks like jest
+                and cypress
+              </li>
+              <li>
+                Stay updated with the latest web development trends and
+                technologies
+              </li>
+            </ul>
+            <button class="submit-button">Cool yeah?</button>
+          </div>
         </div>
       </main>
 
-      <footer></footer>
+      <footer>
+        <p>in fulfilment of stage one of the</p>
+        <p>
+          HNG <br />
+          Internship
+        </p>
+        <p>&copy; 2024 Kehinde Daniels. All rights reserved.</p>
+        <p>Find us on all social media platform</p>
+        <div class="social-media">
+          <a href=""><img src="./asset/twitter.jpg" alt="twitter icon" /></a>
+          <a href=""><img src="./asset/facebook.jpg" alt="facebook icon" /></a>
+          <a href=""><img src="./asset/web (1).jpg" alt="web icon" /></a>
+        </div>
+      </footer>
     </div>
     <!-- <header class="header">
       <div class="container">
