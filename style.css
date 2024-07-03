@@ -175,7 +175,7 @@ textarea:not([rows]) {
 .container {
   background-color: var(--color-light-blue);
   /* height: 100dvh; */
-  background-image: url("./asset/background.png");
+  max-width: 1500px;
 }
 
 header {
@@ -183,7 +183,7 @@ header {
 }
 
 header nav .logo {
-  max-width: 4rem;
+  max-width: 6rem;
 }
 
 header nav .nav-links {
@@ -196,7 +196,7 @@ header nav ul {
 
 .hamburger {
   display: none;
-  width: 40px;
+  width: 30px;
   height: 2px;
   background-color: var(--color-black);
   position: relative;
@@ -237,8 +237,15 @@ header nav button {
 
 .hero {
   margin-top: 3rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
 }
 
+.hero-left {
+  margin-top: -4rem;
+}
 .hero-left,
 .hero-right {
   flex: 1;
@@ -249,7 +256,7 @@ header nav button {
 }
 
 header .hero .hero-right img {
-  width: 579px;
+  width: 100%;
 }
 
 .hero h1 {
@@ -276,6 +283,11 @@ header .hero .hero-right img {
   display: flex;
   z-index: 9999;
   gap: 1rem;
+  /* margin-top: 6rem; */
+}
+
+.hero-left-bottom {
+  margin-top: 3rem;
 }
 
 .latest-project img {
@@ -346,6 +358,11 @@ footer img {
 }
 
 @media (max-width: 768px) {
+  header {
+    padding: 0.5rem;
+    /* justify-content: space-between; */
+  }
+
   .nav-links ul {
     display: none;
     flex-direction: column;
@@ -367,10 +384,8 @@ footer img {
     display: block;
   }
 
-  .nav-links {
+  header .nav-links {
     position: relative;
-    width: 100%;
-    justify-content: space-between;
   }
 
   .hamburger.toggle::before {
@@ -387,5 +402,29 @@ footer img {
 
   .hamburger.toggle {
     background-color: transparent;
+  }
+
+  header .nav-links {
+    margin: 0;
+  }
+
+  header nav button {
+    width: 8rem;
+    padding: 1rem;
+  }
+
+  .hero,
+  .latest-project,
+  .stack,
+  .goal {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hero,
+  .goal {
+    flex-direction: column-reverse;
   }
 }
