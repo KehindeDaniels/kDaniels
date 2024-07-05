@@ -257,6 +257,20 @@ header nav button {
   z-index: 999;
 }
 
+.email-link {
+  color: var(--color-dark-blue); /* Using the color palette provided earlier */
+  text-decoration: none; /* Removes the underline from links */
+  font-weight: normal; /* Keeps the font weight regular, not bold */
+  transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.email-link:hover {
+  color: var(
+    --color-blue
+  ); /* Changes color on hover to indicate interactivity */
+  text-decoration: underline; /* Adds an underline on hover for clarity */
+}
+
 .goals {
   display: flex;
   flex-direction: column;
@@ -281,7 +295,7 @@ header nav button {
 
 .circle {
   min-width: 40px;
-  min-height: 50px;
+  min-height: 40px;
   border-radius: 100%;
 }
 

@@ -13,10 +13,9 @@
   <body>
     <!-- Overall Container -->
     <div class="container">
-      <!-- <img src="./asset/background.png" alt="" /> -->
-      <!-- HEADER -->`
+      <!-- HEADER -->
       <header>
-        <!-- ---------------Navigartion-------------------- -->
+        <!-- Navigation -->
         <nav class="flex-center-between">
           <div class="logo">
             <img src="./asset/logo.png" alt="" />
@@ -30,11 +29,13 @@
             </ul>
             <div class="flex-center">
               <div class="hamburger" onclick="toggleMenu(this)"></div>
-              <button>Contact me</button>
+              <button>
+                <a href="mailto:kehindedaniels501@gmail.com">Contact me</a>
+              </button>
             </div>
           </div>
         </nav>
-        <!-- ---------------Hero section-------------------- -->
+        <!-- Hero section -->
         <div class="hero flex-start">
           <div class="hero-left">
             <div class="hero-left-top">
@@ -46,6 +47,16 @@
                   >
                   <span class="highlight">front-end</span> Developer 👋
                 </h1>
+                <!-- Display Slack Email -->
+                <p>
+                  Email:
+                  <a
+                    href="mailto:kehindedaniels501@gmail.com"
+                    data-testid="slackEmail"
+                    class="email-link"
+                    >kehindedaniels501@gmail.com</a
+                  >
+                </p>
               </div>
             </div>
             <div class="hero-left-bottom">
@@ -99,9 +110,9 @@
       </header>
 
       <footer>
-        <p>in fulfilment of stage one of the</p>
+        <p>In fulfillment of stage one of the</p>
         <p>
-          <a href="https://hng.tech/">HNG Internship</a>
+          <a href="https://hng.tech/learn">HNG Internship</a>
         </p>
         <p>To learn more about the HNG program, visit the following links</p>
         <a href="http://hng.tech/learn" data-testid="hngLink">HNG Learn</a>
@@ -112,7 +123,6 @@
       </footer>
     </div>
     <script>
-      // JavaScript to display current time and day
       document.addEventListener("DOMContentLoaded", function () {
         const currentTimeElement = document.querySelector(
           '[data-testid="currentTimeUTC"]'
