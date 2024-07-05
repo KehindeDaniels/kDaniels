@@ -204,6 +204,7 @@ header nav ul {
   position: relative;
   margin-right: 2rem;
   transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .hamburger::before,
