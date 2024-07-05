@@ -174,8 +174,10 @@ textarea:not([rows]) {
 /* *************** Container *************** */
 .container {
   background-color: var(--color-light-blue);
-  /* height: 100dvh; */
+  min-height: 100dvh;
   max-width: 1500px;
+  display: flex;
+  flex-direction: column;
 }
 
 header {
@@ -255,6 +257,40 @@ header nav button {
   z-index: 999;
 }
 
+.goals {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.all-goals {
+  background-color: var(--color-white);
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+}
+
+.circle-1 {
+  background-color: var(--color-light-yellow);
+}
+.circle-2 {
+  background-color: var(--color-blue);
+}
+.circle-4 {
+  background-color: var(--color-yellow);
+}
+.circle-3 {
+  background-color: var(--color-dark-grey);
+}
+
 header .hero .hero-right img {
   width: 100%;
 }
@@ -290,16 +326,23 @@ header .hero .hero-right img {
   margin-top: 3rem;
 }
 
-.latest-project img {
-  width: 16rem;
+/* Styles for Current Time and Day */
+#currentTimeUTC {
+  background-color: var(--color-yellow);
+  color: var(--color);
+  font-weight: bold;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin: 0 4px;
 }
 
-.stack,
-.goal {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 2rem 4rem;
+#currentDay {
+  background-color: var(--color-blue);
+  color: var(--color-white);
+  font-weight: bold;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin: 0 4px;
 }
 
 .stack-left,
@@ -341,20 +384,28 @@ header .hero .hero-right img {
 }
 
 footer {
+  background-color: #2c3e50;
+  color: #ffffff;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  padding: 20px 0;
+  font-size: 14px;
+  bottom: 0;
+  width: 100%;
+  flex: 1;
 }
 
-footer .social-media {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+footer p {
+  margin: 10px 0;
 }
 
-footer img {
-  width: 50px;
+footer a {
+  color: #4ea8de;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
 
 @media (max-width: 768px) {
