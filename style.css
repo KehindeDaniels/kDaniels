@@ -291,8 +291,9 @@ header nav button {
   background-color: var(--color-dark-grey);
 }
 
-header .hero .hero-right img {
-  width: 100%;
+img[data-testid="slackProfilePicture"] {
+  max-width: 100%;
+  height: auto;
 }
 
 .hero h1 {
@@ -350,10 +351,6 @@ header .hero .hero-right img {
 .goal-left,
 .goal-right {
   flex: 1;
-}
-
-.stack-left img {
-  width: 648px;
 }
 
 .goal-right {
