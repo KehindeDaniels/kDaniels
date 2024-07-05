@@ -272,9 +272,16 @@ header nav button {
   gap: 1rem;
 }
 
+.all-goals .circle {
+  flex: 1;
+}
+.all-goals p {
+  flex: 9;
+}
+
 .circle {
-  width: 40px;
-  height: 40px;
+  min-width: 40px;
+  min-height: 50px;
   border-radius: 100%;
 }
 
